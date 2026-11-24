@@ -55,3 +55,8 @@ nav a {
         }
     }
 }
+
+// Marca: segunda palavra na cor de destaque (verde elétrico)
+body > header h1 span {
+    color: v.$cor-destaque;
+}

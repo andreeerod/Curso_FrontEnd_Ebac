@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// Faixa de abertura logo abaixo do cabeçalho
+.destaque {
+    max-width: v.$largura-maxima;
+    margin: v.$espaco-4 auto 0;
+    padding: v.$espaco-4;
+    border-radius: v.$raio-medio;
+    background:
+        linear-gradient(120deg, rgba(v.$cor-destaque, 0.18), transparent 55%),
+        v.$cor-escura;
+    color: v.$cor-branco;
+
+    &-rotulo {
+        margin: 0 0 v.$espaco-1;
+        color: v.$cor-destaque;
+        font-size: 0.85rem;
+        font-weight: v.$peso-negrito;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &-titulo {
+        max-width: 720px;
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: v.$peso-negrito;
+        line-height: 1.3;
+    }
+
+    @include m.ate("celular") {
+        margin: v.$espaco-2 12px 0;
+        padding: v.$espaco-3;
+
+        &-titulo {
+            font-size: 1.25rem;
+        }
+    }
+}

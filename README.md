@@ -1,4 +1,6 @@
-# Portal de notícias com SASS
+# MotoElétrica: portal de notícias com SASS
+
+Portal de notícias sobre motos elétricas (lançamentos, tecnologia, recarga, mobilidade urbana, mercado e testes). Fotos: Unsplash.
 
 CSS convertido para SASS, organizado em módulos (`@use`) e com variáveis.
 
@@ -8,6 +10,7 @@ sass/
   _mixins.scss      breakpoints, tema da seção, sombra, foco
   _base.scss        reset e tipografia
   _header.scss      cabeçalho fixo e menu
+  _destaque.scss    faixa de abertura
   _secoes.scss      seções (cores geradas com @each a partir do mapa de temas)
   _cartao.scss      cards de notícia
   _rodape.scss      rodapé

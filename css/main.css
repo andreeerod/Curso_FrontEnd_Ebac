@@ -74,29 +74,66 @@ nav a:focus-visible {
   outline: 3px solid #c4f53a;
   outline-offset: 3px;
 }
-nav a[href="#sports"]:hover {
-  background-color: #1f8f3a;
-  color: #fff;
-}
-nav a[href="#economy"]:hover {
-  background-color: #1d4fd8;
-  color: #fff;
-}
-nav a[href="#startups"]:hover {
-  background-color: #2f6bff;
-  color: #fff;
-}
-nav a[href="#inovacao"]:hover {
-  background-color: #5e9400;
-  color: #fff;
-}
-nav a[href="#entretenimento"]:hover {
-  background-color: #7e22ce;
+nav a[href="#lancamentos"]:hover {
+  background-color: #0284c7;
   color: #fff;
 }
 nav a[href="#tecnologia"]:hover {
+  background-color: #6d28d9;
+  color: #fff;
+}
+nav a[href="#recarga"]:hover {
+  background-color: #15803d;
+  color: #fff;
+}
+nav a[href="#mobilidade"]:hover {
   background-color: #c2410c;
   color: #fff;
+}
+nav a[href="#mercado"]:hover {
+  background-color: #1d4ed8;
+  color: #fff;
+}
+nav a[href="#testes"]:hover {
+  background-color: #be123c;
+  color: #fff;
+}
+
+body > header h1 span {
+  color: #c4f53a;
+}
+
+.destaque {
+  max-width: 1200px;
+  margin: 32px auto 0;
+  padding: 32px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(196, 245, 58, 0.18), transparent 55%), #0a0f1c;
+  color: #fff;
+}
+.destaque-rotulo {
+  margin: 0 0 8px;
+  color: #c4f53a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.destaque-titulo {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+@media (max-width: 600px) {
+  .destaque {
+    margin: 16px 12px 0;
+    padding: 24px;
+  }
+  .destaque-titulo {
+    font-size: 1.25rem;
+  }
 }
 
 section {
@@ -128,34 +165,34 @@ section h2 {
   }
 }
 
-#sports {
-  --cor: #1f8f3a;
-  --cor-fundo: #ecf8ef;
-}
-
-#economy {
-  --cor: #1d4fd8;
-  --cor-fundo: #eaf0ff;
-}
-
-#startups {
-  --cor: #2f6bff;
-  --cor-fundo: #e8efff;
-}
-
-#inovacao {
-  --cor: #5e9400;
-  --cor-fundo: #f3fbdc;
-}
-
-#entretenimento {
-  --cor: #7e22ce;
-  --cor-fundo: #f5ecff;
+#lancamentos {
+  --cor: #0284c7;
+  --cor-fundo: #e6f4fc;
 }
 
 #tecnologia {
+  --cor: #6d28d9;
+  --cor-fundo: #f1ebfd;
+}
+
+#recarga {
+  --cor: #15803d;
+  --cor-fundo: #e9f7ee;
+}
+
+#mobilidade {
   --cor: #c2410c;
   --cor-fundo: #fff1e6;
+}
+
+#mercado {
+  --cor: #1d4ed8;
+  --cor-fundo: #eaf0ff;
+}
+
+#testes {
+  --cor: #be123c;
+  --cor-fundo: #fdecf0;
 }
 
 article {
