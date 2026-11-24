@@ -1,0 +1,24 @@
+{
+  "name": "boas-praticas-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --no-source-map sass/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreeerod/Curso_FrontEnd_Ebac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreeerod/Curso_FrontEnd_Ebac/issues"
+  },
+  "homepage": "https://github.com/andreeerod/Curso_FrontEnd_Ebac#readme",
+  "devDependencies": {
+    "sass": "^1.108.2"
+  }
+}
