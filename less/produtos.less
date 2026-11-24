@@ -1,0 +1,61 @@
+section {
+    padding: @espaco[gg] 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: @espaco[g] - 8px;
+
+    @media @tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media @celular {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: @espaco[m] + 8px;
+    border-radius: @raio;
+    background-color: @cores[branco];
+    text-align: center;
+    transition: transform @transicao, box-shadow @transicao;
+    .sombra(1);
+
+    &:hover {
+        transform: translateY(-4px);
+        .sombra(2);
+    }
+
+    img {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+        aspect-ratio: 1;
+        border-radius: @raio;
+    }
+
+    h4 {
+        margin: @espaco[m] 0 @espaco[p];
+        font-size: 1.15rem;
+        color: @cores[escura];
+    }
+
+    p {
+        // escaping: calc é enviado ao CSS sem o LESS tentar calcular
+        flex-grow: 1;
+        margin: 0 0 @espaco[m];
+        max-width: ~"calc(100% - 8px)";
+        color: @cores[texto-suave];
+        font-size: 0.95rem;
+    }
+}
+
+.product-button {
+    .botao();
+}

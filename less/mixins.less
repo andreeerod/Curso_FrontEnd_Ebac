@@ -1,0 +1,28 @@
+// Sombra reutilizável
+.sombra(@nivel: 1) when (@nivel = 1) {
+    box-shadow: 0 2px 10px rgba(30, 36, 51, 0.08);
+}
+
+.sombra(@nivel: 1) when (@nivel = 2) {
+    box-shadow: 0 14px 30px rgba(30, 36, 51, 0.16);
+}
+
+// Botão com a cor do mapa de cores
+.botao(@cor: @cores[primaria], @hover: @cores[primaria-escura]) {
+    display: inline-block;
+    padding: @espaco[p] (@espaco[m] + 4px);
+    border-radius: 999px;
+    background-color: @cor;
+    color: @cores[branco];
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color @transicao, transform @transicao;
+
+    &:hover {
+        background-color: @hover;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}

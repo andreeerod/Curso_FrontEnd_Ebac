@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: @fonte;
+    background-color: @cores[fundo];
+    color: @cores[texto];
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: @largura-container;
+    margin: 0 auto;
+    padding: 0 @espaco[m];
+}
+
+h2 {
+    margin: 0 0 @espaco[g];
+    font-size: 2rem;
+    color: @cores[escura];
+
+    // traço decorativo abaixo do título
+    &::after {
+        content: "";
+        display: block;
+        width: 56px;
+        height: 5px;
+        margin-top: @espaco[p];
+        border-radius: 3px;
+        background-color: @cores[primaria];
+    }
+}

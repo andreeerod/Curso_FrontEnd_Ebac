@@ -1,0 +1,38 @@
+header {
+    padding: @espaco[m] 0;
+    background-color: @cores[escura];
+    border-bottom: 4px solid @cores[primaria];
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: @espaco[m];
+    }
+}
+
+.menu {
+    display: flex;
+    gap: @espaco[p];
+
+    a {
+        display: inline-block;
+        padding: @espaco[p] @espaco[m];
+        border-radius: 999px;
+        color: @cores[branco];
+        font-weight: 700;
+        text-decoration: none;
+        transition: background-color @transicao;
+
+        &:hover {
+            background-color: fade(@cores[branco], 15%);
+        }
+    }
+}
+
+@media @celular {
+    .branding img {
+        width: 90px;
+        height: auto;
+    }
+}
