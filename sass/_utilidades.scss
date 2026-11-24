@@ -1,0 +1,56 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// Link de acessibilidade: aparece só ao navegar com o teclado (Tab)
+.pular-conteudo {
+    position: absolute;
+    top: -100px;
+    left: v.$espaco-2;
+    z-index: v.$z-voltar-topo;
+    padding: 10px 16px;
+    border-radius: v.$raio-pequeno;
+    background-color: v.$cor-destaque;
+    color: v.$cor-escura;
+    font-weight: v.$peso-negrito;
+    text-decoration: none;
+
+    &:focus {
+        top: v.$espaco-2;
+    }
+}
+
+// Botão flutuante de voltar ao topo (aparece após rolar a página)
+.voltar-topo {
+    position: fixed;
+    right: v.$espaco-3;
+    bottom: v.$espaco-3;
+    z-index: v.$z-voltar-topo;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: v.$cor-escura;
+    color: v.$cor-destaque;
+    font-size: 1.4rem;
+    font-weight: v.$peso-negrito;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity v.$transicao, transform v.$transicao, visibility v.$transicao;
+
+    @include m.sombra(2);
+    @include m.foco-visivel;
+
+    &.visivel {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    @include m.ate("celular") {
+        right: v.$espaco-2;
+        bottom: v.$espaco-2;
+    }
+}

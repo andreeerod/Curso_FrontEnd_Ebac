@@ -5,7 +5,7 @@
 body > header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: v.$z-cabecalho;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -22,7 +22,18 @@ body > header {
     }
 
     @include m.ate("celular") {
-        padding: v.$espaco-2;
+        gap: 12px;
+        padding: 12px v.$espaco-2;
+
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        // No celular o menu ocupa a largura toda e rola na horizontal
+        nav {
+            width: calc(100% + #{v.$espaco-2 * 2});
+            margin: 0 (-(v.$espaco-2));
+        }
     }
 }
 
@@ -33,6 +44,23 @@ nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @include m.ate("celular") {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 0 v.$espaco-2 4px;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            flex: none;
+            scroll-snap-align: start;
+        }
+    }
 }
 
 nav a {
@@ -41,15 +69,17 @@ nav a {
     border-radius: v.$raio-pilula;
     background-color: rgba(v.$cor-branco, 0.14);
     color: v.$cor-branco;
-    font-weight: v.$peso-negrito;
+    font-weight: v.$peso-medio;
     text-decoration: none;
+    white-space: nowrap;
     transition: background-color v.$transicao, color v.$transicao;
 
     @include m.foco-visivel;
 
     // Cada link assume a cor da seção que ele aponta
     @each $nome, $tema in v.$temas {
-        &[href="##{$nome}"]:hover {
+        &[href="##{$nome}"]:hover,
+        &[href="##{$nome}"].ativo {
             background-color: map.get($tema, cor);
             color: v.$cor-branco;
         }

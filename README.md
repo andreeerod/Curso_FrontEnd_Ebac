@@ -14,6 +14,7 @@ sass/
   _secoes.scss      seções (cores geradas com @each a partir do mapa de temas)
   _cartao.scss      cards de notícia
   _rodape.scss      rodapé
+  _utilidades.scss  link "pular para o conteúdo" e botão de voltar ao topo
   main.scss         reúne os módulos com @use
 ```
 
@@ -22,3 +23,10 @@ npm install
 npm run sass          # compila sass/main.scss em css/main.css
 npm run sass:watch    # recompila ao salvar
 ```
+
+## UX
+
+- Tipografia Rubik
+- Menu destaca a seção visível (js/main.js), e no celular rola na horizontal
+- Botão de voltar ao topo e link "pular para o conteúdo" para teclado
+- Imagens com carregamento preguiçoso e proporção fixa (sem saltos no layout)

@@ -1,4 +1,5 @@
 @use "variables" as v;
+@use "mixins" as m;
 
 * {
     box-sizing: border-box;
@@ -6,7 +7,11 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 96px;
+    scroll-padding-top: v.$altura-cabecalho;
+
+    @include m.ate("celular") {
+        scroll-padding-top: v.$altura-cabecalho-celular;
+    }
 
     @media (prefers-reduced-motion: reduce) {
         scroll-behavior: auto;
@@ -18,7 +23,13 @@ body {
     font-family: v.$fonte-base;
     background-color: v.$cor-fundo-pagina;
     color: v.$cor-texto;
-    line-height: 1.55;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background-color: v.$cor-destaque;
+    color: v.$cor-escura;
 }
 
 h1,
@@ -26,4 +37,9 @@ h2,
 h3 {
     font-weight: v.$peso-negrito;
     letter-spacing: -0.01em;
+}
+
+// O foco vindo do "pular conteúdo" e do "voltar ao topo" não precisa de contorno
+main:focus {
+    outline: none;
 }

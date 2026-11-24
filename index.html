@@ -6,13 +6,14 @@
     <title>Moto Elétrica | Portal de notícias</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.css" />
 </head>
 <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
     <header>
         <h1>Moto<span>Elétrica</span></h1>
-        <nav>
+        <nav aria-label="Seções do portal">
             <ul>
                 <li>
                     <a href="#lancamentos" title="Ir para a seção de lançamentos">Lançamentos</a>
@@ -35,6 +36,7 @@
             </ul>
         </nav>
     </header>
+    <main id="conteudo" tabindex="-1">
     <div class="destaque">
         <p class="destaque-rotulo">Portal de notícias</p>
         <p class="destaque-titulo">Tudo sobre o mundo das motos elétricas: lançamentos, recarga, tecnologia e testes.</p>
@@ -42,7 +44,7 @@
     <section id="lancamentos">
         <h2>Lançamentos</h2>
         <article>
-            <img src="./imagens/lanc-1.jpg" alt="Esportiva elétrica chega às concessionárias com 200 km de autonomia" />
+            <img src="./imagens/lanc-1.jpg" alt="Esportiva elétrica chega às concessionárias com 200 km de autonomia" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -53,7 +55,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/lanc-2.jpg" alt="Café racer elétrica une estilo clássico e motor silencioso" />
+            <img src="./imagens/lanc-2.jpg" alt="Café racer elétrica une estilo clássico e motor silencioso" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -64,7 +66,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/lanc-3.jpg" alt="Conceito minimalista antecipa a próxima geração de motos urbanas" />
+            <img src="./imagens/lanc-3.jpg" alt="Conceito minimalista antecipa a próxima geração de motos urbanas" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -78,7 +80,7 @@
     <section id="tecnologia">
         <h2>Tecnologia</h2>
         <article>
-            <img src="./imagens/tec-1.jpg" alt="Baterias de nova química prometem recarga 40% mais rápida" />
+            <img src="./imagens/tec-1.jpg" alt="Baterias de nova química prometem recarga 40% mais rápida" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -89,7 +91,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/tec-2.jpg" alt="Freio regenerativo devolve energia à bateria nas descidas" />
+            <img src="./imagens/tec-2.jpg" alt="Freio regenerativo devolve energia à bateria nas descidas" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -100,7 +102,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/tec-3.jpg" alt="Painéis conectados mostram autonomia e pontos de recarga em tempo real" />
+            <img src="./imagens/tec-3.jpg" alt="Painéis conectados mostram autonomia e pontos de recarga em tempo real" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -114,7 +116,7 @@
     <section id="recarga">
         <h2>Recarga</h2>
         <article>
-            <img src="./imagens/rec-1.jpg" alt="Rede de carregadores rápidos cresce nas grandes cidades" />
+            <img src="./imagens/rec-1.jpg" alt="Rede de carregadores rápidos cresce nas grandes cidades" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -125,7 +127,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/rec-2.jpg" alt="Quanto custa carregar uma moto elétrica em casa" />
+            <img src="./imagens/rec-2.jpg" alt="Quanto custa carregar uma moto elétrica em casa" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -136,7 +138,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/rec-3.jpg" alt="Energia solar reduz ainda mais o custo de rodar" />
+            <img src="./imagens/rec-3.jpg" alt="Energia solar reduz ainda mais o custo de rodar" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -150,7 +152,7 @@
     <section id="mobilidade">
         <h2>Mobilidade urbana</h2>
         <article>
-            <img src="./imagens/urb-1.jpg" alt="Scooters elétricas ganham espaço no trajeto casa-trabalho" />
+            <img src="./imagens/urb-1.jpg" alt="Scooters elétricas ganham espaço no trajeto casa-trabalho" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -161,7 +163,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/urb-2.jpg" alt="Silêncio no trânsito: cidades sentem a queda do ruído" />
+            <img src="./imagens/urb-2.jpg" alt="Silêncio no trânsito: cidades sentem a queda do ruído" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -172,7 +174,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/urb-3.jpg" alt="Entregadores trocam a moto a combustão pela elétrica" />
+            <img src="./imagens/urb-3.jpg" alt="Entregadores trocam a moto a combustão pela elétrica" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -186,7 +188,7 @@
     <section id="mercado">
         <h2>Mercado</h2>
         <article>
-            <img src="./imagens/mer-1.jpg" alt="Vendas de motos elétricas dobram em um ano" />
+            <img src="./imagens/mer-1.jpg" alt="Vendas de motos elétricas dobram em um ano" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -197,7 +199,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/mer-2.jpg" alt="Assinatura mensal vira opção para quem quer testar antes de comprar" />
+            <img src="./imagens/mer-2.jpg" alt="Assinatura mensal vira opção para quem quer testar antes de comprar" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -208,7 +210,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/mer-3.jpg" alt="Incentivos fiscais reduzem o preço final em alguns estados" />
+            <img src="./imagens/mer-3.jpg" alt="Incentivos fiscais reduzem o preço final em alguns estados" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -222,7 +224,7 @@
     <section id="testes">
         <h2>Testes</h2>
         <article>
-            <img src="./imagens/tes-1.jpg" alt="Avaliação: uma semana rodando só com moto elétrica" />
+            <img src="./imagens/tes-1.jpg" alt="Avaliação: uma semana rodando só com moto elétrica" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -233,7 +235,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/tes-2.jpg" alt="Testamos uma elétrica de estilo scrambler na estrada" />
+            <img src="./imagens/tes-2.jpg" alt="Testamos uma elétrica de estilo scrambler na estrada" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -244,7 +246,7 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
         <article>
-            <img src="./imagens/tes-3.jpg" alt="Scooter urbana: prática, econômica e fácil de pilotar" />
+            <img src="./imagens/tes-3.jpg" alt="Scooter urbana: prática, econômica e fácil de pilotar" width="800" height="500" loading="lazy" />
             <header>
                 <time datetime="2026-11-24">24/11/2026</time>
             </header>
@@ -255,8 +257,13 @@
             <a href="#" title="Leia a notícia completa">Ler mais</a>
         </article>
     </section>
+    </main>
     <footer>
         <p>&copy; 2026 MotoElétrica, portal de notícias</p>
     </footer>
+
+    <a href="#conteudo" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo">↑</a>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

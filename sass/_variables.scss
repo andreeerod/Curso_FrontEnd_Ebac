@@ -17,8 +17,9 @@ $temas: (
 );
 
 // ---------- Tipografia ----------
-$fonte-base: "Outfit", Arial, sans-serif;
+$fonte-base: "Rubik", system-ui, Arial, sans-serif;
 $peso-normal: 400;
+$peso-medio: 500;
 $peso-negrito: 700;
 
 // ---------- Espaçamento e forma ----------
@@ -39,3 +40,9 @@ $breakpoints: (
 
 // ---------- Transição ----------
 $transicao: 0.2s ease;
+
+// ---------- Camadas ----------
+$z-cabecalho: 10;
+$z-voltar-topo: 20;
+$altura-cabecalho: 156px;
+$altura-cabecalho-celular: 136px;
