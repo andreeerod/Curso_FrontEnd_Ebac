@@ -1,26 +1,30 @@
-# Exercício LESS
+# Exercício Grunt
 
-Estilo do projeto do Material de apoio convertido para LESS.
+Projeto da loja (estilo em LESS) automatizado com Grunt.
 
-```
-less/
-  variaveis.less   variáveis, mapas (@cores, @espaco) e escapings das media queries
-  mixins.less      sombra e botão
-  base.less        reset, container e títulos
-  header.less      cabeçalho e menu
-  produtos.less    grid e cards de produtos
-  rodape.less      rodapé com ícones sociais
-  main.less        importa todos os arquivos
-```
+## Tarefas do `Gruntfile.js`
 
-Recursos usados:
-
-- **Variáveis:** `@fonte`, `@raio`, `@transicao`, `@largura-container`
-- **Divisão dos arquivos:** `main.less` reúne os módulos com `@import`
-- **Escapings:** `@celular: ~"(max-width: 600px)"` e `~"calc(100% - 8px)"`
-- **Mapas:** `@cores[primaria]`, `@espaco[m]`
+| Tarefa | O que faz | Origem → destino |
+| --- | --- | --- |
+| `less:desenvolvimento` | Compila o LESS | `src/less/main.less` → `dist/css/styles.css` |
+| `less:producao` | Compila o LESS comprimido | `src/less/main.less` → `dist/css/styles.min.css` |
+| `uglify` | Comprime o JavaScript | `src/js/main.js` → `dist/js/main.min.js` |
+| `build` | `less` + `uglify` | |
+| `default` | `build` + `watch` (recompila ao salvar) | |
 
 ```bash
 npm install
-npm run less   # compila less/main.less em css/styles.css
+npm run build   # grunt build
+npm run dev     # grunt (build + watch)
+```
+
+## Estrutura
+
+```
+src/
+  less/   variáveis, mapas, escapings e arquivos separados
+  js/     JavaScript original
+dist/     arquivos gerados pelo Grunt (usados pelo index.html)
+Gruntfile.js
+index.html
 ```
