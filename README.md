@@ -1,32 +1,33 @@
-# MotoElétrica: portal de notícias com SASS
+# MotoElétrica: portal de notícias com Gulp
 
-Portal de notícias sobre motos elétricas (lançamentos, tecnologia, recarga, mobilidade urbana, mercado e testes). Fotos: Unsplash.
+Portal de notícias sobre motos elétricas. O código-fonte fica em `src/` e o Gulp gera a versão otimizada em `dist/`.
 
-CSS convertido para SASS, organizado em módulos (`@use`) e com variáveis.
+## Tarefas do Gulp (`gulpfile.mjs`)
 
-```
-sass/
-  _variables.scss   cores, temas das seções (mapa), tipografia, espaçamentos, breakpoints
-  _mixins.scss      breakpoints, tema da seção, sombra, foco
-  _base.scss        reset e tipografia
-  _header.scss      cabeçalho fixo e menu
-  _destaque.scss    faixa de abertura
-  _secoes.scss      seções (cores geradas com @each a partir do mapa de temas)
-  _cartao.scss      cards de notícia
-  _rodape.scss      rodapé
-  _utilidades.scss  link "pular para o conteúdo" e botão de voltar ao topo
-  main.scss         reúne os módulos com @use
-```
+| Tarefa | O que faz | Origem → destino |
+| --- | --- | --- |
+| `estilos` | Compila o SASS em CSS comprimido | `src/styles/main.scss` → `dist/css/main.min.css` |
+| `imagens` | Comprime as imagens JPEG (sharp/mozjpeg, qualidade 70) | `src/images/` → `dist/images/` |
+| `scripts` | Comprime o JavaScript (uglify) | `src/scripts/` → `dist/js/main.min.js` |
+| `build` | Roda as três tarefas em paralelo | |
+| `default` | `build` + observa as alterações | |
 
 ```bash
 npm install
-npm run sass          # compila sass/main.scss em css/main.css
-npm run sass:watch    # recompila ao salvar
+npm run build   # gera a pasta dist
+npm run dev     # build e recompila ao salvar
 ```
 
-## UX
+Resultado da compressão das imagens: 1,38 MB → 712 KB (cerca de 48% menor).
 
-- Tipografia Rubik
-- Menu destaca a seção visível (js/main.js), e no celular rola na horizontal
-- Botão de voltar ao topo e link "pular para o conteúdo" para teclado
-- Imagens com carregamento preguiçoso e proporção fixa (sem saltos no layout)
+## Estrutura
+
+```
+src/
+  styles/    SASS com variáveis e módulos (@use)
+  scripts/   JavaScript
+  images/    imagens originais (Unsplash)
+dist/        arquivos gerados pelo Gulp (usados pelo index.html)
+gulpfile.mjs
+index.html
+```
