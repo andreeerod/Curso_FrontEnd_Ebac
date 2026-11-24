@@ -1,0 +1,83 @@
+:root {
+    --azul: #1d4ed8;
+    --azul-escuro: #12338f;
+    --azul-claro: #e8efff;
+    --laranja: #ff7a1a;
+    --laranja-escuro: #e5640a;
+    --laranja-claro: #fff0e3;
+    --bs-body-font-family: "Roboto", system-ui, sans-serif;
+}
+
+html { font-size: 19px; }
+
+body {
+    font-family: var(--bs-body-font-family);
+    min-height: 100vh;
+    background-color: var(--azul-claro);
+    background-image:
+        radial-gradient(40rem 30rem at 0% 0%, rgba(29, 78, 216, .25), transparent 60%),
+        radial-gradient(40rem 30rem at 100% 100%, rgba(255, 122, 26, .30), transparent 60%);
+    background-attachment: fixed;
+}
+
+.cartao {
+    border: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 48px rgba(18, 51, 143, .18);
+}
+
+.cartao-topo {
+    padding: 2rem 2rem 1.75rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-escuro) 100%);
+    border-bottom: 6px solid var(--laranja);
+}
+
+.cartao-topo h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -.01em;
+}
+
+.cartao-topo p {
+    margin: .4rem 0 0;
+    opacity: .85;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--azul-escuro);
+}
+
+.form-control {
+    padding: .85rem 1.1rem;
+    font-size: 1.1rem;
+    border: 2px solid #d7def0;
+    border-radius: 16px;
+}
+
+.form-control:focus {
+    border-color: var(--laranja);
+    box-shadow: 0 0 0 .25rem rgba(255, 122, 26, .22);
+}
+
+.btn-laranja {
+    padding: .95rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--laranja);
+    border: 0;
+    border-radius: 16px;
+    transition: background-color .15s, transform .1s;
+}
+
+.btn-laranja:hover,
+.btn-laranja:focus-visible {
+    color: #fff;
+    background-color: var(--laranja-escuro);
+}
+
+.btn-laranja:active { transform: scale(.98); }
