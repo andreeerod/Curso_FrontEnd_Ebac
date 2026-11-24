@@ -1,0 +1,39 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "sass:map";
+
+section {
+    @include m.tema(#333, v.$cor-branco);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: v.$espaco-3;
+    max-width: v.$largura-maxima;
+    margin: v.$espaco-4 auto;
+    padding: v.$espaco-3;
+    background-color: var(--cor-fundo);
+    border-top: 8px solid var(--cor);
+    border-bottom: 4px solid v.$cor-destaque;
+    border-radius: v.$raio-pequeno;
+
+    h2 {
+        grid-column: 1 / -1;
+        margin: 0;
+        color: var(--cor);
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    @include m.ate("celular") {
+        margin: v.$espaco-2 12px;
+        padding: v.$espaco-2;
+    }
+}
+
+// Gera uma regra de cor para cada seção a partir do mapa de temas
+@each $nome, $tema in v.$temas {
+    ##{$nome} {
+        @include m.tema(map.get($tema, cor), map.get($tema, fundo));
+    }
+}

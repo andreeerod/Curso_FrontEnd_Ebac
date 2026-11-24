@@ -1,0 +1,80 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+article {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: v.$cor-branco;
+    border-radius: v.$raio-medio;
+    transition: transform v.$transicao, box-shadow v.$transicao;
+
+    @include m.sombra(1);
+
+    &:hover {
+        transform: translateY(-4px);
+
+        @include m.sombra(2);
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    header,
+    h3,
+    p,
+    > a {
+        margin-right: v.$espaco-2;
+        margin-left: v.$espaco-2;
+    }
+
+    time {
+        display: inline-block;
+        margin-top: 12px;
+        color: v.$cor-texto-suave;
+        font-size: 0.8rem;
+    }
+
+    h3 {
+        margin-top: 4px;
+        margin-bottom: v.$espaco-1;
+        color: var(--cor);
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: v.$espaco-2;
+        font-size: 0.95rem;
+    }
+
+    > a {
+        align-self: flex-start;
+        margin-top: auto;
+        margin-bottom: v.$espaco-2;
+        padding: 8px 18px;
+        border-radius: v.$raio-pilula;
+        background-color: var(--cor);
+        color: v.$cor-branco;
+        font-weight: v.$peso-negrito;
+        text-decoration: none;
+        transition: filter v.$transicao;
+
+        &:hover {
+            filter: brightness(1.15);
+        }
+
+        @include m.foco-visivel;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "sass:map";
+
+body > header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: v.$espaco-2;
+    padding: v.$espaco-2 v.$espaco-4;
+    background-color: v.$cor-escura;
+    color: v.$cor-branco;
+    border-bottom: 3px solid v.$cor-destaque;
+
+    h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    @include m.ate("celular") {
+        padding: v.$espaco-2;
+    }
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: v.$raio-pilula;
+    background-color: rgba(v.$cor-branco, 0.14);
+    color: v.$cor-branco;
+    font-weight: v.$peso-negrito;
+    text-decoration: none;
+    transition: background-color v.$transicao, color v.$transicao;
+
+    @include m.foco-visivel;
+
+    // Cada link assume a cor da seção que ele aponta
+    @each $nome, $tema in v.$temas {
+        &[href="##{$nome}"]:hover {
+            background-color: map.get($tema, cor);
+            color: v.$cor-branco;
+        }
+    }
+}

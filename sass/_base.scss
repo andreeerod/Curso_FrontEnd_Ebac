@@ -1,0 +1,29 @@
+@use "variables" as v;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+
+    @media (prefers-reduced-motion: reduce) {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: v.$fonte-base;
+    background-color: v.$cor-fundo-pagina;
+    color: v.$cor-texto;
+    line-height: 1.55;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: v.$peso-negrito;
+    letter-spacing: -0.01em;
+}

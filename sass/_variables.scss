@@ -1,0 +1,41 @@
+// ---------- Cores ----------
+$cor-texto: #1d2230;
+$cor-texto-suave: #5b6275;
+$cor-fundo-pagina: #f4f5f9;
+$cor-escura: #0a0f1c;
+$cor-destaque: #c4f53a;
+$cor-branco: #fff;
+
+// ---------- Tema de cada seção (cor principal + fundo suave) ----------
+$temas: (
+    "sports": (cor: #1f8f3a, fundo: #ecf8ef),
+    "economy": (cor: #1d4fd8, fundo: #eaf0ff),
+    "startups": (cor: #2f6bff, fundo: #e8efff),
+    "inovacao": (cor: #5e9400, fundo: #f3fbdc),
+    "entretenimento": (cor: #7e22ce, fundo: #f5ecff),
+    "tecnologia": (cor: #c2410c, fundo: #fff1e6),
+);
+
+// ---------- Tipografia ----------
+$fonte-base: "Outfit", Arial, sans-serif;
+$peso-normal: 400;
+$peso-negrito: 700;
+
+// ---------- Espaçamento e forma ----------
+$espaco-1: 8px;
+$espaco-2: 16px;
+$espaco-3: 24px;
+$espaco-4: 32px;
+$raio-pequeno: 8px;
+$raio-medio: 16px;
+$raio-pilula: 999px;
+$largura-maxima: 1200px;
+
+// ---------- Breakpoints ----------
+$breakpoints: (
+    "celular": 600px,
+    "tablet": 900px,
+);
+
+// ---------- Transição ----------
+$transicao: 0.2s ease;

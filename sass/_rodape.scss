@@ -1,0 +1,12 @@
+@use "variables" as v;
+
+body > footer {
+    padding: v.$espaco-2;
+    background-color: v.$cor-escura;
+    color: v.$cor-branco;
+    text-align: center;
+
+    p {
+        margin: 0;
+    }
+}

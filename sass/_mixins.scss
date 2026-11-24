@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "variables" as v;
+
+// Media query a partir do nome do breakpoint (largura máxima)
+@mixin ate($nome) {
+    @media (max-width: map.get(v.$breakpoints, $nome)) {
+        @content;
+    }
+}
+
+// Define as variáveis CSS de cor de uma seção
+@mixin tema($cor, $fundo) {
+    --cor: #{$cor};
+    --cor-fundo: #{$fundo};
+}
+
+@mixin sombra($nivel: 1) {
+    @if $nivel == 1 {
+        box-shadow: 0 2px 8px rgba(10, 15, 28, 0.1);
+    } @else {
+        box-shadow: 0 14px 28px rgba(10, 15, 28, 0.18);
+    }
+}
+
+@mixin foco-visivel {
+    &:focus-visible {
+        outline: 3px solid v.$cor-destaque;
+        outline-offset: 3px;
+    }
+}
